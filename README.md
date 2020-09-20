@@ -9,15 +9,14 @@ This project will analyze the occurance, location and prevalence of UFO sighting
 1) Which cities have the highest prevalence in sightings
 2) Are the shape of the sighting dependent on the duration?
 3) Are sightings with similar shape or duration more prevalent in certain cities?
-4) How does UFO prevalence impact _________________
+4) XXX
 
 
 ## Prior Work: 
 The dataset was first explored by Shelby in preliminary research.  To date only minimal data cleaning has been completed, for example identifying what data is missig or prevalence of outliers in the data. Although this dataset contains enough data for interesting results, it may be combined with other datasets, such as election data.  
-##Datasets:
-
+## Datasets:
 ### List of datasets to use
-Data is foundi in csv files
+Data currently in csv files including: complete.csv
 ### Where found (URL and who is supplying the data, e.g., NASA)
 Data can be found here https://www.kaggle.com/NUFORC/ufo-sightings
 data is compiled on Kaggle by an independent user
