@@ -1,9 +1,9 @@
 # Title: UFO
 ## Team members: 
-1)Shelby 
-2)Gurhar
-3)Kara Wolley
-4)Sam Cramer
+1) Shelby 
+2) Gurhar
+3) Kara Wolley
+4) Sam Cramer
 ## Description: 
 This project will analyze the occurance, location and prevalence of UFO sightings in the United States in the last century.  Our work will address the following questions:
 1) Which cities have the highest prevalence in sightings
