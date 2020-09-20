@@ -2,9 +2,11 @@ Your project proposal should be approximately 3 pages using the template and con
 following main sections:
 
 
-# Problem Statement/motivation (like homework 1, what knowledge and how would you
+# Problem Statement/motivation 
+(like homework 1, what knowledge and how would you
 apply that knowledge, what is interesting that you hope to find)
-UFO sightings in the United States has been a highly controversal topic for over a century.  Main stream media rarely publishes possible sightings for fear of redicule while individuals that report a sighting are often cast out from society.  This project will aim to report when and where sightings occur, how sightings are perseved (shape or duration) and the XXX.  This report will provide 
+
+UFO sightings across the Globe has been a highly controversal topic for over a century.  Main stream media rarely publishes possible sightings for fear of redicule while individuals that report a sighting are often cast out from society.  This project will aim to report when and where sightings occur, how sightings are perseved (shape or duration) and the XXX.  This report will provide 
 
 # Literature survey (previous work) describe and cite.
 
