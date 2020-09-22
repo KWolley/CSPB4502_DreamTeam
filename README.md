@@ -17,7 +17,7 @@ This project will analyze the occurance, location and prevalence of UFO sighting
 We have downloaded our data and selected the best UFO sightings and US election results dataset with the most data points and cleanest data. We've aso looked into attributes to merge on (zip code vs. US States) and we believe that merging on US States will be appropriate. We've also started thinking about other ways to clean and prepare the data for analysis.
 ## Datasets:
   1) UFO Sightings dataset
-    * URL: [UFO sightings][1]
+* URL: [UFO sightings][1]
     * b) Downloaded as csv files on Kara and Shelby's computers
   2) US Elections dataset (House and Senate)
     * a) URL: [US Elections][2]
