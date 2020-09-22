@@ -16,25 +16,31 @@ This project will analyze the occurance, location and prevalence of UFO sighting
 ## Prior Work:
 We have downloaded our data and selected the best UFO sightings and US election results dataset with the most data points and cleanest data. We've aso looked into attributes to merge on (zip code vs. US States) and we believe that merging on US States will be appropriate. We've also started thinking about other ways to clean and prepare the data for analysis.
 ## Datasets:
-  1)UFO Sightings dataset
-     a) URL: https://www.kaggle.com/NUFORC/ufo-sightings?select=complete.csv
-     b) Downloaded as csv files on Kara and Shelby's computers
-  2)US Elections dataset (House and Senate)
-    a) URL: https://www.kaggle.com/tunguz/us-elections-dataset
-    b) Downloaded on Shelby's computer
+  1) UFO Sightings dataset
+    * a) URL: [UFO sightings][1]
+    * b) Downloaded as csv files on Kara and Shelby's computers
+  2) US Elections dataset (House and Senate)
+    * a) URL: [US Elections][2]
+    * b) Downloaded on Shelby's computer
 ## Proposed Work:
   1) Cleaning
-    a) The UFO dataset is especially 'dirty' and will to remove symbols and format dates and state abbreviations. This will also be         
-    necesarry prior to merging with the US Elections dataset. The US Elections dataset seems much cleaner but likely will need some cleaning.
+    * a) The UFO dataset is especially 'dirty' and will to remove symbols and format dates and state abbreviations. This will also be         
+      necesarry prior to merging with the US Elections dataset. The US Elections dataset seems much cleaner but likely will need some cleaning.
   2) Preprocessing
-    a)XXX
+    * a)XXX
   3) Integration
-    a) Merge the UFO dataset with the US elections dataset. This will drop some UFO sightings that occured outside of the US states.
+    * a) Merge the UFO dataset with the US elections dataset. This will drop some UFO sightings that occured outside of the US states.
  ## Tools:
   R and python
 ## Evaluation: 
     
 
 
+
+
+
+
+[1]: https://www.kaggle.com/NUFORC/ufo-sightings?select=complete.csv "UFO Sightings"
+[2]: https://www.kaggle.com/tunguz/us-elections-dataset "US Elections"
 
 
