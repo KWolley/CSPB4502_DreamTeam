@@ -33,11 +33,11 @@ We have downloaded our data and selected the best UFO sightings and US election 
   3) Integration
     - Merge the UFO dataset with the US elections dataset. This will drop some UFO sightings that occured outside of the US states.
   4) Mining
-    - Questions 1 and 2 in Description could be explored with histogram analysis and correlation analysis respectivly. Duration of sighting for question two may have to be converted into an interval variable or nominal for chi-square testing.
-    - A chi square test could be applied to question 3 as well to establish any correlation between UFO shape and cities. 
-    - We may have to define similarity measures between shapes like "sphere" and "circle" vs "sphere" and "triangle" for question 4
-    - Histogram analysis may shed some initial light on say the shapes used to describe UFOs and the gender of the person reporting the sighting for question 5. 
-    - A term cloud may provide insight into language in sighting descriptions
+    - Questions 1 and 2 in Description could be explored with histogram analysis and correlation analysis respectivly. Duration of sighting for question two may have to be converted into an interval variable or nominal for chi-square testing. <br/>
+    - A chi square test could be applied to question 3 as well to establish any correlation between UFO shape and cities. <br/>
+    - We may have to define similarity measures between shapes like "sphere" and "circle" vs "sphere" and "triangle" for question 4 <br/>
+    - Histogram analysis may shed some initial light on say the shapes used to describe UFOs and the gender of the person reporting the sighting for question 5. <br/> 
+    - A term cloud may provide insight into language in sighting descriptions<br/>
  ## Tools:
   - R, python, pandas, numpy
 ## Evaluation: 
