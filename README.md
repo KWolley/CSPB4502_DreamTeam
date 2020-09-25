@@ -14,7 +14,8 @@ This project will analyze the occurance, location and prevalence of UFO sighting
 6) During years with the highest number of UFO sightings, which political parties win the most election?
 7) What kind of relationships exist between geographic regions with UFO sightings and their election results?
 8) What kind of language/words are used to describe UFOs?
-9) XXX
+9) Do multiple UFO sightings within the same area happen frequently or infrequently? If they are frequent, what's the average time lapsed between each sighting.
+10) How did the proximity of an election affect the frequency of UFO sightings across the US?
 ## Prior Work:
 We have downloaded our data and selected the best UFO sightings and US election results dataset with the most data points and cleanest data. We've aso looked into attributes to merge on (zip code vs. US States) and we believe that merging on US States will be appropriate. We've also started thinking about other ways to clean and prepare the data for analysis.
 ## Datasets:
@@ -29,9 +30,9 @@ We have downloaded our data and selected the best UFO sightings and US election 
     - The UFO dataset is especially 'dirty' and will to remove symbols and format dates and state abbreviations. This will also be         
       necesarry prior to merging with the US Elections dataset. The US Elections dataset seems much cleaner but likely will need some cleaning.
   2) Preprocessing
-    - XXX
+    - The UFO dataset will need to have some values input that are missing. Some values may remain null, but many are predictable, such as if the 'county' value for       a row of data is blank, but we know the state is 'TX,' it's safe to input the USA for the country value. 
   3) Integration
-    - Merge the UFO dataset with the US elections dataset. This will drop some UFO sightings that occured outside of the US states.
+    - Merge the UFO dataset with the US elections dataset. This will drop some UFO sightings that occured outside of the US states. 
   4) Mining <br/>
     - Questions 1 and 2 in Description could be explored with histogram analysis and correlation analysis respectivly. Duration of sighting for question two may have to be converted into an interval variable or nominal for chi-square testing. <br/>
     - A chi square test could be applied to question 3 as well to establish any correlation between UFO shape and cities. <br/>
