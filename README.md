@@ -18,7 +18,7 @@ This project will analyze the occurance, location and prevalence of UFO sighting
 10) How did the proximity of an election affect the frequency of UFO sightings across the US?
 11) In states that vote Republican are there more or less UFO sightings?
 
-TOP 3
+TOP 4
 1) How does term number effect the number of UFO sightings? Is this also dependent on the political party?
 2) Are UFO sightings increasing over time?
 3) If UFO sightings do increase over time, how is that correlated with the turn out rate for elections?
