@@ -40,7 +40,7 @@ We have downloaded our data and selected the best UFO sightings and US election 
     - Histogram analysis may shed some initial light on say the shapes used to describe UFOs and the gender of the person reporting the sighting for question 5. <br/> 
     - A term cloud may provide insight into language in sighting descriptions<br/>
  ## Tools:
-  - R, python, pandas, numpy
+  - R, python - numpy, pandas
 ## Evaluation: 
 
 
