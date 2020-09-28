@@ -25,7 +25,8 @@ TOP 4
 4) In states that vote Republican are there more or less UFO sightings?
 
 ## Prior Work:
-We have downloaded our data and selected the best UFO sightings and US election results dataset with the most data points and cleanest data. We've aso looked into attributes to merge on (zip code vs. US States) and we believe that merging on US States will be appropriate. We've also started thinking about other ways to clean and prepare the data for analysis.
+ Prior work on this dataset includes 166 notebooks presenting analysis on kaggle (https://www.kaggle.com/NUFORC/ufo-sightings/notebooks)
+ Some of the most commonly explored questions include: Frequency of sightings by location (including per capita), word cloud analysis on the description <br/> attribute, shape of UFOs by time of year, sightings by shape and season, and shape frequencies, just to name a few avenues of exploration. Perhaps the most <br/>  explored question is whether sightings have increased over time, the data seem to show that they have. Among the correlational questions explored one chi-square <br/>  analysis revealed a relationship between sightings and region (https://www.kaggle.com/adhok93/eda-and-chi-squared-test). While shape over time has been <br/>  explored, the time variable was usually by week or month, rather than by decade for example (this could be interesting to explore). Merging this dataset with election data will likely add a new level of novelty to our work not present in the prior work. <br/> 
 ## Datasets:
   1) UFO Sightings dataset
   - URL: [UFO sightings][1]
