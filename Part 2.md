@@ -11,7 +11,8 @@ A secondary goal of this project is to integrate election data with the UFO data
 2)	XXX
 
 # Literature survey (previous work) describe and cite.
-XXX
+#### Prior Work:
+Prior work on this dataset includes 166 notebooks presenting analysis on kaggle (https://www.kaggle.com/NUFORC/ufo-sightings/notebooks) Some of the most commonly explored questions include: Frequency of sightings by location (including per capita), word cloud analysis on the description attribute, shape of UFOs by time of year, sightings by shape and season, and shape frequencies, just to name a few avenues of exploration. Perhaps the most explored question is whether sightings have increased over time, the data seem to show that they have. Among the correlational questions explored one chi-square analysis revealed a relationship between sightings and region (https://www.kaggle.com/adhok93/eda-and-chi-squared-test). While shape over time has been explored, the time variable was usually by week or month, rather than by decade for example (this could be interesting to explore). Merging this dataset with election data will likely add a new level of novelty to our work not present in the prior work.
 
 # Proposed Work
 The aim of this report is to apply all phases of the knowledge discovery process to UFO sighting data collected by the National UFO Reporting Center.  Methods used by the knowledge discovery process include, data cleaning, integration, selection, transformation, mining, evaluation and knowledge presentation.  Primary data include sightings from the last century across the United States, Great Britain, Germany, Canada and Australia.  Additional integration of data will include county presidential election results from the year 200-2016, if time permits.  
