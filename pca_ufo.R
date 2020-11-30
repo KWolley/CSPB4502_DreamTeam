@@ -1,7 +1,6 @@
 library(dplyr)
 library(tidyr)
 library(plyr)
-library(factoextra)
 #options(stringsAsFactors = FALSE)
 
 
