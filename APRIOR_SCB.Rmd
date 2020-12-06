@@ -1,0 +1,188 @@
+---
+title: "Apriori_SCB"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(tidyr)
+library(plyr)
+library(arules)
+library(stringr)
+library(RColorBrewer) 
+#options(stringsAsFactors = FALSE)
+```
+
+
+### Data cleaning
+```{r data cleaning}
+data <- read.csv("test.csv")
+
+#data <- data[which(data$last_election_year == "2012"),]
+
+data$ID <- seq.int(nrow(data))
+
+extras <-  c("\\[", "\\]", "\\'", " ")
+
+data <- data %>% 
+  mutate(comments_array = str_remove_all(comments_array, regex(str_c(extras, collapse = '|')))) 
+
+  clean <- c("san", "francisco", "new", "york", "vegas",
+             "las", "jersey", "pd", "diego",
+             "tinley", "park", "puget")
+
+  #remove string in clean but only if they start "//b" with the string
+  #split into rows with strsplit but commas and then unnest
+data <- data %>% select(comments_array, ID, last_election_year, party) %>% dplyr::rename("items" = "comments_array") %>% 
+  mutate(items = str_remove_all(items, regex(str_c("\\b", clean, "\\b", collapse = '|'))))  %>% 
+  mutate(items = strsplit(as.character(items), ",")) %>%
+  unnest(items)  
+
+
+
+data$items <- gsub("lights", "light", data$items)
+
+#data$items <- gsub("fhing", "", data$items)
+# create transaction data
+data <- as.data.frame(data)
+
+```
+
+
+```{r pre 1996}
+dataL <- data[which(data$last_election_year < "1996"),]
+dataL <- dataL %>% select(items, ID)
+trans <- as(split(dataL[,"items"],dataL[,"ID"],), "transactions")
+
+#################################
+## simple plot of top 5 frequent items
+itemFrequencyPlot(trans, topN=10, type="absolute", main="Item Frequency") # plot frequent items
+
+# get all rules
+basket_rules <- apriori(trans,parameter = list(sup = 0.001, conf = 0.8, minlen = 2))
+#in descending order
+
+##remove rules that are subsets of other rules
+subset_rules1 <- which(colSums(is.subset(basket_rules, basket_rules)) > 1)
+rules_conf1 <- basket_rules[-subset_rules1]
+rules_conf2 <- sort (rules_conf1, by="confidence", decreasing=TRUE) # 'high-confidence' rules.
+inspect(rules_conf2[1:20])
+
+
+
+##ploting the associaton rules
+library(arulesViz)
+plot(basket_rules)
+subRules2<-head(rules_conf2, n=20, by="confidence")
+plot(subRules2, method = "graph")
+```
+
+
+```{r}
+dataG <- data[which(data$last_election_year >= "1996"),]
+
+trans <- as(split(dataG[,"items"],dataG[,"ID"],), "transactions")
+
+
+#################################
+## simple plot of top 5 frequent items
+itemFrequencyPlot(trans, topN=10, type="absolute", main="Item Frequency") # plot frequent items
+
+
+
+
+
+# get all rules
+basket_rules <- apriori(trans,parameter = list(sup = 0.001, conf = 0.8, minlen = 2))
+#in descending order
+
+##remove rules that are subsets of other rules
+subset_rules1 <- which(colSums(is.subset(basket_rules, basket_rules)) > 1)
+rules_conf1 <- basket_rules[-subset_rules1]
+rules_conf2 <- sort (rules_conf1, by="confidence", decreasing=TRUE) # 'high-confidence' rules.
+inspect(rules_conf2[1:10])
+
+
+
+##ploting the associaton rules
+library(arulesViz)
+plot(basket_rules)
+subRules2<-head(rules_conf2, n=20, by="confidence")
+plot(subRules2, method = "grouped")
+```
+
+```{r}
+dataD <- data[which(data$party == "democrat"),]
+
+trans <- as(split(dataD[,"items"],dataD[,"ID"],), "transactions")
+
+
+#################################
+## simple plot of top 5 frequent items
+itemFrequencyPlot(trans, topN=10, type="absolute", main="Item Frequency") # plot frequent items
+
+# get all rules
+basket_rules <- apriori(trans,parameter = list(sup = 0.001, conf = 0.8, minlen = 2))
+#in descending order
+
+##remove rules that are subsets of other rules
+subset_rules1 <- which(colSums(is.subset(basket_rules, basket_rules)) > 1)
+rules_conf1 <- basket_rules[-subset_rules1]
+rules_conf2 <- sort (rules_conf1, by="confidence", decreasing=TRUE) # 'high-confidence' rules.
+inspect(rules_conf2[1:10])
+
+## get rules with a specific lhs
+rules <- apriori (data=trans, parameter=list (supp=0.001,conf = 0.1, minlen = 2), appearance = list (default="lhs",rhs="light"), control = list (verbose=F))
+subset_rules2 <- which(colSums(is.subset(rules, rules)) > 1)
+rules_conf3 <- rules[-subset_rules2]
+rules_conf3 <- sort (rules_conf3, by="confidence", decreasing=TRUE) # 'high-confidence' rules.
+inspect(rules_conf3[1:10])
+
+
+##ploting the associaton rules
+library(arulesViz)
+plot(basket_rules)
+subRules2<-head(rules_conf2, n=10, by="confidence")
+plot(subRules2, method = "grouped")
+plot(subRules2, method = "graph")
+```
+
+```{r}
+dataR <- data[which(data$party == "republican"),]
+
+trans <- as(split(dataR[,"items"],dataR[,"ID"],), "transactions")
+
+
+#################################
+## simple plot of top 5 frequent items
+itemFrequencyPlot(trans, topN=10, type="absolute", main="Item Frequency") # plot frequent items
+
+
+
+
+
+# get all rules
+basket_rules <- apriori(trans,parameter = list(sup = 0.001, conf = 0.8, minlen = 2))
+#in descending order
+
+##remove rules that are subsets of other rules
+subset_rules1 <- which(colSums(is.subset(basket_rules, basket_rules)) > 1)
+rules_conf1 <- basket_rules[-subset_rules1]
+rules_conf2 <- sort (rules_conf1, by="confidence", decreasing=TRUE) # 'high-confidence' rules.
+inspect(rules_conf2[1:10])
+
+## get rules with a specific lhs
+rules <- apriori (data=trans, parameter=list (supp=0.001,conf = 0.1, minlen = 2), appearance = list (default="lhs",rhs="light"), control = list (verbose=F))
+subset_rules2 <- which(colSums(is.subset(rules, rules)) > 1)
+rules_conf3 <- rules[-subset_rules2]
+rules_conf3 <- sort (rules_conf3, by="confidence", decreasing=TRUE) # 'high-confidence' rules.
+inspect(rules_conf3[1:10])
+
+
+##ploting the associaton rules
+library(arulesViz)
+plot(basket_rules)
+subRules2<-head(rules_conf2, n=10, by="confidence")
+plot(subRules2, method = "grouped")
+plot(subRules2, method = "graph")
+```
