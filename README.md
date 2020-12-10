@@ -20,8 +20,10 @@ This project analyzed the occurance, location and prevalence of UFO sightings in
 Our project can be used to understand the trends in UFO sightings over the last century such as the frequency of sightings, how the language used to describe them has changed, and when sightings are most likely to occur. On top of this, it shows how UFO sightings have correlated with other world events, like elections and their turnouts during the last half century. 
   
 ## Link to the video demonstration:
+https://github.com/KWolley/CSPB4502_UFO_PresidentialElections/blob/master/Group2_UFO_Sightings_Presidential_Elections_Part6_Video.mp4
   
 ## Link to your final project paper:
+https://github.com/KWolley/CSPB4502_UFO_PresidentialElections/blob/master/02_UFOPresidentialElections_Part4.pdf
 
 
 
